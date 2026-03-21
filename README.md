@@ -65,7 +65,7 @@ The domain utilizes a high-redundancy Anycast network through **Cloudflare**, di
    Name Server: NS3.CLOUDFLARE.COM
    ... [truncated]
 
-### 3. DNSSEC & Cryptographic Integrity
+### 4. DNSSEC & Cryptographic Integrity
 The infrastructure implements **DNSSEC Extensions**, providing a layer of trust by signing DNS records.
 * **Signature Verified:** Detected `RRSIG` records using **Algorithm 13 (ECDSA P-256)**.
 * **Protocol Protection:** This setup effectively mitigates **DNS Spoofing** and **Man-in-the-Middle (MitM)** attacks during the resolution phase.
