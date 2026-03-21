@@ -64,3 +64,12 @@ The domain utilizes a high-redundancy Anycast network through **Cloudflare**, di
    Registry Expiry Date: 2033-02-17T22:07:54Z
    Name Server: NS3.CLOUDFLARE.COM
    ... [truncated]
+
+### 3. DNSSEC & Cryptographic Integrity
+The infrastructure implements **DNSSEC Extensions**, providing a layer of trust by signing DNS records.
+* **Signature Verified:** Detected `RRSIG` records using **Algorithm 13 (ECDSA P-256)**.
+* **Protocol Protection:** This setup effectively mitigates **DNS Spoofing** and **Man-in-the-Middle (MitM)** attacks during the resolution phase.
+* **Dual-Stack Capability:** Full support for both **IPv4 (A records)** and **IPv6 (AAAA records)**, ensuring global reachability and modern networking standards.
+
+> **Technical Evidence (`dnsdig.txt`):**
+> Valid RRSIG signatures detected with expiration dates set for March 2026, confirming real-time cryptographic maintenance.
