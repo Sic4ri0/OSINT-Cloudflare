@@ -24,13 +24,13 @@ python3 scripts/procesar_evidencia.py
 
 **This project is for educational and passive auditing purposes only.**
 
-No intrusion attacks, active scanning, or denial-of-service tests 
-were performed against Cloudflare's infrastructure. 
+No intrusion attacks, active scanning, or denial-of-service tests
+were performed against Cloudflare's infrastructure.
 
-The author (Sic4ri0) is not responsible for any misuse 
-of this information or the tools provided in this repository. 
+The author (Sic4ri0) is not responsible for any misuse
+of this information or the tools provided in this repository.
 
-Always ensure you have explicit permission before 
+Always ensure you have explicit permission before
 conducting any security assessment.
 
 ---
@@ -74,7 +74,7 @@ The infrastructure implements **DNSSEC Extensions**, providing a layer of trust 
 
 > **Technical Evidence (`dnsdig.txt`):**
 > Valid RRSIG signatures detected with expiration dates set for March 2026, confirming real-time cryptographic maintenance.
-```
+´´´
 ---
 
 ## 🌐 HTTP Infrastructure Mapping (httpx)
@@ -88,7 +88,7 @@ These represent the "Front-Door" of the organization—fully accessible and oper
 * **Dashboards:** `one.dash.cloudflare.com` (Zero Trust entrance).
 
 ### 2. Hardened Endpoints (HTTP 403 - Forbidden)
-Critical discovery: Several subdomains are behind **Active Challenge/WAF filters**. 
+Critical discovery: Several subdomains are behind **Active Challenge/WAF filters**.
 * **Evidence:** `dash.cloudflare.com`, `community.cloudflare.com`, `support.cloudflare.com`.
 * **Insight:** The presence of titles like *"Just a moment..."* and *"Attention Required!"* indicates that these assets are protected by **Cloudflare Turnstile** and **Bot Management** policies, preventing automated scraping or unauthorized bot access.
 
