@@ -131,3 +131,4 @@ o> **Developer Note:** This tool was built on **Linux Mint [HACKLAB💀]** using
 * Environment Support: Real-time troubleshooting on Linux Mint.
 
 > Note: This collaboration highlights the use of AI as a force multiplier.
+```
