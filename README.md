@@ -103,10 +103,7 @@ Critical discovery: Several subdomains are behind **Active Challenge/WAF filters
 [https://dash.cloudflare.com](https://dash.cloudflare.com) [403] [Attention Required! | Cloudflare]
 [https://challenges.cloudflare.com](https://challenges.cloudflare.com) [200] [Cloudflare Turnstile]
 [https://one.dash.cloudflare.com](https://one.dash.cloudflare.com) [200] [Cloudflare One]
-´´´
-<br>
-<hr>
-<br>
+```
 
 ## 🛠️ Automation & Scripting Logic (The Engine)
 
