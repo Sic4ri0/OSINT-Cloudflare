@@ -74,3 +74,32 @@ The infrastructure implements **DNSSEC Extensions**, providing a layer of trust 
 
 > **Technical Evidence (`dnsdig.txt`):**
 > Valid RRSIG signatures detected with expiration dates set for March 2026, confirming real-time cryptographic maintenance.
+```
+---
+
+## 🌐 HTTP Infrastructure Mapping (httpx)
+
+The final stage of the reconnaissance pipeline involved deep fingerprinting of active services using `httpx`. This mapped the functional architecture of the target, revealing service segmentation and security filters.
+
+### 1. Active Services & Public Gateways (HTTP 200)
+These represent the "Front-Door" of the organization—fully accessible and operational services.
+* **Developer Tools:** `developers.cloudflare.com`, `workers.cloudflare.com`, `pages.cloudflare.com`.
+* **Security & Research:** `radar.cloudflare.com`, `research.cloudflare.com`, `rpki.cloudflare.com`.
+* **Dashboards:** `one.dash.cloudflare.com` (Zero Trust entrance).
+
+### 2. Hardened Endpoints (HTTP 403 - Forbidden)
+Critical discovery: Several subdomains are behind **Active Challenge/WAF filters**. 
+* **Evidence:** `dash.cloudflare.com`, `community.cloudflare.com`, `support.cloudflare.com`.
+* **Insight:** The presence of titles like *"Just a moment..."* and *"Attention Required!"* indicates that these assets are protected by **Cloudflare Turnstile** and **Bot Management** policies, preventing automated scraping or unauthorized bot access.
+
+### 3. Service Redirection & Lifecycle (HTTP 301/302)
+* Significant use of redirects for legacy or specialized tools (e.g., `ai.cloudflare.com` -> `playground.ai.cloudflare.com`).
+* **Canonical Enforcement:** Continuous redirection to HTTPS ensuring encrypted-only traffic.
+
+### 📊 Infrastructure Snapshot (`mmapa_infra.txt`)
+```bash
+# Top-tier findings from the httpx automated mapping
+[https://help.one.cloudflare.com](https://help.one.cloudflare.com) [200] [Help tool - Cloudflare Zero Trust]
+[https://dash.cloudflare.com](https://dash.cloudflare.com) [403] [Attention Required! | Cloudflare]
+[https://challenges.cloudflare.com](https://challenges.cloudflare.com) [200] [Cloudflare Turnstile]
+[https://one.dash.cloudflare.com](https://one.dash.cloudflare.com) [200] [Cloudflare One]
