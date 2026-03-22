@@ -123,6 +123,7 @@ The script follows a strictly sequential and validated workflow:
 
 o> **Developer Note:** This tool was built on **Linux Mint [HACKLAB💀]** using Python 3, prioritizing lightweight execution and native tool integration over heavy external dependencies.
 ```
+
 ---
 
 ## 🤝 Acknowledgments & Collaboration
@@ -134,3 +135,4 @@ This project's documentation and architectural refinement were developed in a co
 * **Environment Support:** Real-time troubleshooting on Linux Mint [HACKLAB💀].
 
 > **Note:** This collaboration highlights the use of AI as a force multiplier in modern cybersecurity research and development.
+```
